@@ -42,7 +42,7 @@
         .B { background: #2196f3; color: white; }
         .C { background: #ff9800; color: white; }
         .D { background: #9c27b0; color: white; }
-        .E { background: #f44336; color: white; }
+        .F { background: #f44336; color: white; }
         .error { background: #e91e63; color: white; }
     </style>
 </head>
@@ -65,15 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
         } elseif ($score >= 90 && $score <= 94) {
              echo "Grade: Very Good";
             echo "<p class='grade B'>Great Job!</p>";
-        } elseif ($score < 89 && $score >= 85) {
+        } elseif ($score >= 85 && $score <= 89) {
              echo "Grade: Good";
             echo "<p class='grade C'>Good effort, keep it up!</p>";
-        } elseif ($score < 84 && $score >= 75) {
+        } elseif ($score >= 75 && $score <= 84) {
              echo "Grade: Needs Improvement";
             echo "<p class='grade D'>Work harder next time.</p>";
         } elseif ($score <=74) {
              echo "Grade: Failed";
-            echo "<p class='grade E'>You need to improve.</p>";
+            echo "<p class='grade F'>You need to improve.</p>";
         } 
 
         echo "</div>";
